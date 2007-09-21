@@ -1,0 +1,57 @@
+PerlSwitches -w
+LogLevel debug
+DirectoryIndex test.js
+
+Alias /raw @DocumentRoot@
+<Location /raw>
+    PerlOutputFilterHandler Apache2::Filter::Minifier::JavaScript
+</Location>
+
+<Location /mimetypes/single>
+    SetHandler              modperl
+    PerlResponseHandler     MY::PlainHandler
+    PerlOutputFilterHandler Apache2::Filter::Minifier::JavaScript
+    PerlAddVar              JsMimeType text/plain
+</Location>
+
+<Location /mimetypes/multiple>
+    SetHandler              modperl
+    PerlResponseHandler     MY::PlainHandler
+    PerlOutputFilterHandler Apache2::Filter::Minifier::JavaScript
+    PerlAddVar              JsMimeType application/octet-stream
+    PerlAddVar              JsMimeType text/plain
+    PerlAddVar              JsMimeType text/json
+</Location>
+
+<Location /decline_uc>
+    SetHandler              modperl
+    PerlResponseHandler     MY::PlainHandler
+    PerlOutputFilterHandler Apache2::Filter::Minifier::JavaScript MY::UpperCase
+</Location>
+
+<Location /dynamic/plain>
+    SetHandler              modperl
+    PerlResponseHandler     MY::PlainHandler
+    PerlOutputFilterHandler Apache2::Filter::Minifier::JavaScript
+</Location>
+
+<Location /dynamic/js>
+    SetHandler              modperl
+    PerlResponseHandler     MY::JSHandler
+    PerlOutputFilterHandler Apache2::Filter::Minifier::JavaScript
+</Location>
+
+Alias /cgi-bin @ServerRoot@/cgi-bin
+<Location /cgi-bin>
+    SetHandler              cgi-script
+    PerlOutputFilterHandler Apache2::Filter::Minifier::JavaScript
+    Options                 +ExecCGI
+</Location>
+
+Alias /perl-bin @ServerRoot@/perl-bin
+<Location /perl-bin>
+    SetHandler              perl-script
+    PerlResponseHandler     ModPerl::Registry
+    PerlOutputFilterHandler Apache2::Filter::Minifier::JavaScript
+    Options                 +ExecCGI
+</Location>
