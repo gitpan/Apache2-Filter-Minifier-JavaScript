@@ -14,5 +14,6 @@ $build_pkg->new(
         },
     'requires'          => {
         'JavaScript::Minifier'  => 0,
+        'mod_perl2'             => 2.0,
         },
     )->create_build_script();

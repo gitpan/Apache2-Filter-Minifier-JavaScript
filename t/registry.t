@@ -7,7 +7,7 @@ use lib 't';
 use MY::slurp;
 
 # Test filtered ModPerl::Registry output
-plan tests => 4, have_lwp;
+plan tests => 4, need_lwp;
 
 # MP::Registry, plain text should be un-altered
 registry_unaltered: {

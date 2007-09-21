@@ -1,6 +1,6 @@
 ---
 name: Apache2-Filter-Minifier-JavaScript
-version: 1.00
+version: 1.01
 author:
   - Graham TerMarsch (cpan@howlingfrog.com)
 abstract: JS minifying output filter
@@ -9,12 +9,13 @@ resources:
   license: http://dev.perl.org/licenses/
 requires:
   JavaScript::Minifier: 0
+  mod_perl2: 2
 build_requires:
   Apache::Test: 1.12
 provides:
   Apache2::Filter::Minifier::JavaScript:
     file: lib/Apache2/Filter/Minifier/JavaScript.pm
-    version: 1.00
+    version: 1.01
 generated_by: Module::Build version 0.2805
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html

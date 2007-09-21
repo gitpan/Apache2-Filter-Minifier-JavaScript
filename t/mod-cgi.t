@@ -8,7 +8,7 @@ use lib 't';
 use MY::slurp;
 
 # Test filtered mod_cgi output
-plan tests => 4, (have_lwp && have_cgi);
+plan tests => 4, (need_lwp && need_cgi);
 
 # Get test config
 my $svrroot = Apache::Test::vars('serverroot');

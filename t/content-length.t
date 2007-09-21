@@ -4,7 +4,7 @@ use Apache::Test;
 use Apache::TestRequest;
 
 # Test "Content-Length" logic
-plan tests => 2, have_lwp;
+plan tests => 2, need_lwp;
 
 # plain text is handled by default-handler, which sets Content-Length
 default_handler: {

@@ -7,7 +7,7 @@ use lib 't';
 use MY::slurp;
 
 # Make sure that non-JS files get passed through unaltered
-plan tests => 1, have_lwp;
+plan tests => 1, need_lwp;
 
 # Non-JS file should get passed through unaltered
 non_js_unaltered: {

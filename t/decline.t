@@ -7,7 +7,7 @@ use lib 't';
 use MY::slurp;
 
 # Test non-JS responses still have other filters applied
-plan tests => 1, have_lwp;
+plan tests => 1, need_lwp;
 
 # non-JS response is processed by other filters
 other_filters: {

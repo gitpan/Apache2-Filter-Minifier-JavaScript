@@ -1,4 +1,8 @@
 Revision history for Perl extension Apache2::Filter::Minifier::JavaScript.
 
+1.01    Fri Sep 21 13:31 PDT 2007
+    - added explicit dependency on MP2
+    - updated test requirements to "need_*" instead of "have_*"
+
 1.00    Thu Sep 20 12:45 PDT 2007
     - initial version

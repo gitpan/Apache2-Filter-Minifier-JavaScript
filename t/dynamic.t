@@ -7,7 +7,7 @@ use lib 't';
 use MY::slurp;
 
 # Test dynamically generated content
-plan tests => 2, have_lwp;
+plan tests => 2, need_lwp;
 
 # dynamic, plain text should be un-altered
 dynamic_unaltered: {
