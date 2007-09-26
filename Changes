@@ -1,5 +1,9 @@
 Revision history for Perl extension Apache2::Filter::Minifier::JavaScript.
 
+1.02    Wed Sep 26  1:25 PDT 2007
+    - added Makefile.PL, so CPANPLUS testers stop failing tests because they
+      don't have Module::Build installed
+
 1.01    Fri Sep 21 13:31 PDT 2007
     - added explicit dependency on MP2
     - updated test requirements to "need_*" instead of "have_*"
