@@ -14,7 +14,7 @@ use JavaScript::Minifier qw(minify);
 
 ###############################################################################
 # Version number.
-our $VERSION = '1.02';
+our $VERSION = '1.03_01';
 
 ###############################################################################
 # MIME-Types we're willing to minify.
@@ -41,8 +41,12 @@ sub handler {
         map { $_=>1 } $r->dir_config->get('JsMimeType'),
         );
 
+    # determine Content-Type of document
+    my $ctype = $r->content_type;
+    $ctype =~ s{;.*}{};
+
     # only process JS documents
-    unless (exists $types{$r->content_type}) {
+    unless (exists $types{$ctype}) {
         $log->info( "skipping request to ", $r->uri, " (not a JS document)" );
         return Apache2::Const::DECLINED;
     }

@@ -23,6 +23,12 @@ Alias /raw @DocumentRoot@
     PerlAddVar              JsMimeType text/json
 </Location>
 
+<Location /charset>
+    SetHandler              modperl
+    PerlResponseHandler     MY::CharsetHandler
+    PerlOutputFilterHandler Apache2::Filter::Minifier::JavaScript
+</Location>
+
 <Location /decline_uc>
     SetHandler              modperl
     PerlResponseHandler     MY::PlainHandler
