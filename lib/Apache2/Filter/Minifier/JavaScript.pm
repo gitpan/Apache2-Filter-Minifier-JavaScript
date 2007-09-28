@@ -14,7 +14,7 @@ use JavaScript::Minifier qw(minify);
 
 ###############################################################################
 # Version number.
-our $VERSION = '1.03_01';
+our $VERSION = '1.03';
 
 ###############################################################################
 # MIME-Types we're willing to minify.

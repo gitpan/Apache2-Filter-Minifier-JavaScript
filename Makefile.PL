@@ -12,9 +12,9 @@ use ExtUtils::MakeMaker;
 #
 # Fortunately, Apache::Test comes -with- mod_perl2, so anyone who actually
 # wants to use this module probably already has it installed.  If not, we abort
-# -before- we write out the Makefile, so that CPAN(PLUS) hopefully won't file
-# CPAN Tester "failure" reports; even if they were to install it as a
-# dependency we'd still fail our tests as its a -configuration-requirement-.
+# -before- we write out "Makefile", so that CPAN(PLUS) won't file CPAN Tester
+# "failure" reports; even if they were to install Apache::Test as a dependency
+# we'd still fail our tests... its a -configuration-requirement-.
 my $HAVE_APACHE_TEST = eval {
     require Apache::TestMM;
     require Apache::TestRunPerl;

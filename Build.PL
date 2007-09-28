@@ -8,13 +8,13 @@ use Module::Build;
 #
 # If its not installed, we're going to abort the build entirely as we'll be
 # unable to run our test suites (which need to be set up -NOW- and not when you
-# run "Build").  The joys of "configure requirements"...
+# run "./Build").  The joys of "configure requirements"...
 #
 # Fortunately, Apache::Test comes -with- mod_perl2, so anyone who actually
 # wants to use this module probably already has it installed.  If not, we abort
-# -before- we write out the Build, so that CPAN(PLUS) hopefully won't file CPAN
-# Tester "failure" reports; even if they were to install it as a dependency
-# we'd still fail our tests as its a -configuration-requirement-.
+# -before- we write out "Build", so that CPAN(PLUS) won't file CPAN Tester
+# "failure" reports; even if they were to install Apache::Test as a dependency
+# we'd still fail our tests... its a -configuration-requirement-.
 my $HAVE_APACHE_TEST = eval {
         require Apache::TestMB
         };

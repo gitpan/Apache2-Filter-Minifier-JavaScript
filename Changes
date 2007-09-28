@@ -1,5 +1,9 @@
 Revision history for Perl extension Apache2::Filter::Minifier::JavaScript.
 
+1.03    Fri Sep 28 11:09 PDT 2007
+    - release; verified that changes in 1.03_01 for configuration requirements
+      worked as intended when doing CPANPLUS test runs
+
 1.03_01 Thu Sep 27 13:27 PDT 2007
     - rewrote Build.PL/Makefile.PL so they now check if you've got Apache::Test
       installed -at-configuration-time-.  If not, the build is aborted.  One
