@@ -11,6 +11,7 @@ t/content-length.t
 t/decline.t
 t/dynamic.t
 t/mime-types.t
+t/minifiers.t
 t/mod-cgi.t
 t/non-js.t
 t/registry.t
@@ -20,6 +21,7 @@ t/conf/extra.conf.in
 t/htdocs/test.js
 t/htdocs/test.txt
 t/htdocs/minified.txt
+t/htdocs/minified-xs.txt
 t/MY/slurp.pm
 t/MY/CharsetHandler.pm
 t/MY/JSHandler.pm

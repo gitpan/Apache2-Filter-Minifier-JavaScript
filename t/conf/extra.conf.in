@@ -2,6 +2,10 @@ PerlSwitches -w
 LogLevel debug
 DirectoryIndex test.js
 
+<Location />
+    PerlSetVar              JsMinifier      JavaScript::Minifier
+</Location>
+
 Alias /raw @DocumentRoot@
 <Location /raw>
     PerlOutputFilterHandler Apache2::Filter::Minifier::JavaScript
@@ -60,4 +64,18 @@ Alias /perl-bin @ServerRoot@/perl-bin
     PerlResponseHandler     ModPerl::Registry
     PerlOutputFilterHandler Apache2::Filter::Minifier::JavaScript
     Options                 +ExecCGI
+</Location>
+
+<Location /explicit/pp>
+    SetHandler              modperl
+    PerlResponseHandler     MY::JSHandler
+    PerlOutputFilterHandler Apache2::Filter::Minifier::JavaScript
+    PerlSetVar              JsMinifier      JavaScript::Minifier
+</Location>
+
+<Location /explicit/xs>
+    SetHandler              modperl
+    PerlResponseHandler     MY::JSHandler
+    PerlOutputFilterHandler Apache2::Filter::Minifier::JavaScript
+    PerlSetVar              JsMinifier      JavaScript::Minifier::XS
 </Location>

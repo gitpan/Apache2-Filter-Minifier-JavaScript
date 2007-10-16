@@ -1,5 +1,11 @@
 Revision history for Perl extension Apache2::Filter::Minifier::JavaScript.
 
+1.04_01 Tue Oct 16 00:59 PDT 2007
+    - added timing info to the debug logs
+    - use JavaScript::Minifier::XS if available; its -MUCH- faster
+    - new "JsMinifier" PerlVar, to let you specify which minifier package or
+      function to use (otherwise we try J:M:XS first, falling back to J:M)
+
 1.03    Fri Sep 28 11:09 PDT 2007
     - release; verified that changes in 1.03_01 for configuration requirements
       worked as intended when doing CPANPLUS test runs

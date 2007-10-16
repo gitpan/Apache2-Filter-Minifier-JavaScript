@@ -49,6 +49,7 @@ WriteMakefile(
     'PREREQ_PM'         => {
         'JavaScript::Minifier'  => 0,
         'mod_perl2'             => 2.0,
+        'Time::HiRes'           => 0,
         # really a configuration requirement, but EU::MM doesn't support that
         'Apache::Test'          => 1.12,
         },
