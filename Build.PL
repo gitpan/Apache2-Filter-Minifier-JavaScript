@@ -1,4 +1,4 @@
-use 5.008;
+use 5.006;
 use strict;
 use warnings;
 use Module::Build;
@@ -52,6 +52,7 @@ $build_pkg->new(
         'JavaScript::Minifier'  => 0,
         'mod_perl2'             => 2.0,
         'Time::HiRes'           => 0,
+        'perl'                  => '5.6.0',
         },
     'recommends'        => {
         'JavaScript::Minifier::XS' => 0,

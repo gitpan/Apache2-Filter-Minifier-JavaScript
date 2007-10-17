@@ -3,7 +3,8 @@ package MY::slurp;
 use strict;
 use warnings;
 use IO::File;
-use base qw( Exporter );
+use Exporter;
+our @ISA = qw(Exporter);
 our @EXPORT = qw(slurp);
 
 sub slurp {

@@ -6,8 +6,8 @@ MANIFEST.SKIP
 META.yml
 README.txt
 lib/Apache2/Filter/Minifier/JavaScript.pm
-t/charset.t
 t/content-length.t
+t/content-type.t
 t/decline.t
 t/dynamic.t
 t/mime-types.t
@@ -25,6 +25,7 @@ t/htdocs/minified-xs.txt
 t/MY/slurp.pm
 t/MY/CharsetHandler.pm
 t/MY/JSHandler.pm
+t/MY/NoCTypeHandler.pm
 t/MY/PlainHandler.pm
 t/MY/UpperCase.pm
 t/perl-bin/js.pl
