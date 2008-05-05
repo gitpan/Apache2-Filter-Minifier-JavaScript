@@ -19,7 +19,7 @@ eval { require JavaScript::Minifier::XS; };
 
 ###############################################################################
 # Version number.
-our $VERSION = '1.04_02';
+our $VERSION = '1.04';
 
 ###############################################################################
 # MIME-Types we're willing to minify.
